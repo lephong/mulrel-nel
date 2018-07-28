@@ -21,7 +21,7 @@ The following instruction is for replicating the experiments reported in [1].
 #### Data
 
 Download data from [here](https://drive.google.com/open?id=1IDjXFnNnHf__MO5j_onw4YwR97oS8lAy) 
-and unzip to the main folder.
+and unzip to the main folder (i.e. your-path/mulrel-net).
 
 #### Train
 
