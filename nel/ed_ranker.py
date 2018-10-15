@@ -324,7 +324,7 @@ class EDRanker:
                 optimizer.step()
                 self.model.regularize(max_norm=100)
 
-                loss = loss.cpu().data.numpy()[0]
+                loss = loss.cpu().data.numpy()
                 total_loss += loss
                 print('epoch', e, "%0.2f%%" % (dc/len(train_dataset) * 100), loss, end='\r')
 

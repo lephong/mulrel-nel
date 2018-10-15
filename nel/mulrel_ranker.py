@@ -37,7 +37,7 @@ class MulRelRanker(LocalCtxAttRanker):
         self.ent_ent_comp = config.get('ent_ent_comp', 'bilinear')  # bilinear, trans_e, fbilinear
         self.ctx_comp = config.get('ctx_comp', 'bow')  # bow or rnn
 
-        self.mode = config.get('mode', 'ment-norm')  # ment-norm, rel-norm
+        self.mode = config.get('mulrel_type', 'ment-norm')  # ment-norm, rel-norm
 
         # options for ment-norm
         self.first_head_uniform = config.get('first_head_uniform', False)
@@ -221,7 +221,7 @@ class MulRelRanker(LocalCtxAttRanker):
                                            rel_ctx_ctx_weights.view(n_rels, n_ments, 1, n_ments, 1), dim=0)\
                                  .mul(1. / n_rels)  # n_ments x n_cands x n_ments x n_cands
 
-            elif self.mode == 'multirel':
+            elif self.mode == 'rel-norm':
                 rel_vecs = torch.matmul(ctx_ctx_rel_probs.view(n_ments, n_ments, 1, n_rels),
                                         self.rel_embs.view(1, 1, n_rels, -1))\
                            .view(n_ments, n_ments, -1)
