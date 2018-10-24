@@ -6,7 +6,7 @@ A Python implementation of Multi-relatonal Named Entity Linking described in
 [1] Phong Le and Ivan Titov (2018). [Improving Entity Linking by 
 Modeling Latent Relations between Mentions](https://arxiv.org/pdf/1804.10637.pdf). ACL 2018.
 
-Written and maintained by Phong Le (ple [at] inf.ed.ac.uk)
+Written and maintained by Phong Le (ple [at] exseed.ed.ac.uk )
 
 
 ### Installation
